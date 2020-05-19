@@ -1,0 +1,174 @@
+<div class="chat-application main-box row" style="height: 80vh">
+  <div class="left-side col-lg-3 col-md-3 col-sm-12 col-12 " style="display: block; height: 100%;">
+    <div class="bg-white border-bottom patient-detail" style="height: auto; width: 100%; display: block">
+      <div class="p-2 display-block">
+        <a class="list-group-item bg-blue-grey bg-lighten-5 border-right-primary border-right-2" (click)="SetActive($event, 'chat1')" style="z-index: 122">
+          <span class="media">
+                <span class="avatar avatar-md avatar-online">
+                  <img class="media-object d-flex mr-3 bg-primary height-50 rounded-circle" src="assets/img/portrait/small/avatar-s-3.png" alt="Generic placeholder image">
+                  <i></i>
+                </span>
+                <div class="media-body text-left">
+                  <h6 class="list-group-item-heading" id="patient-name">Elizabeth Elliott
+                    <span class="font-small-3 float-right primary" id="call-time-lapsed">00:25:30</span> <!-- Call time lapsed -->
+                  </h6>
+                  <p class="list-group-item-text text-muted">
+                    <i class="ft-globe primary font-small-2"></i> Active
+                    <span class="float-right primary">
+                      <i class="font-medium-1 icon-earphones-alt blue-grey lighten-3"></i>
+                    </span>
+                  </p>
+                  <p class="list-group-item-text text-muted">
+                    <i class="ft-alert-circle danger font-small-2"></i> Allergy:
+                    <span class="float-right primary">
+                      Penicillins
+                    </span>
+                  </p>
+                </div>
+              </span>
+        </a>
+      </div>
+      <ngb-tabset>
+        <ngb-tab title="Chat">
+          <ng-template ngbTabContent>
+            <div class="chat-box" style="height: 60vh; width: 100%; display: block;">
+              <div #contentOverlay class="content-overlay" (click)="onContentOverlay()"></div>
+              <div class="chat-app-window" style="height: 80%" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+                <div class="badge badge-dark mb-1">Chat History</div>
+                <div class="chats">
+                  <div class="chats">
+                    <div [ngClass]="[chat.chatClass]" *ngFor="let chat of chat">
+                      <div class="chat-body p-0 m-0" >
+                        <div class="chat-content m-0 mb-1" *ngFor="let message of chat.messages">
+                          <p *ngIf="chat.messageType === 'text'">{{ message }}</p>
+                          <vg-player *ngIf="chat.messageType === 'audio'" style="width: 100%">
+                            <audio [vgMedia]="media1" #media1 id="singleAudio" preload="auto" controls>
+                              <source [src]="message" type="audio/mp3">
+                            </audio>
+                          </vg-player>
+                          <vg-player *ngIf="chat.messageType === 'video'" style="height: 20%; width: 100%">
+                            <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls>
+                              <source [src]="message" type="video/mp4">
+                            </video>
+                          </vg-player>
+                        </div>
+                      </div>
+                      <p class="time" *ngIf="chat.time !='' ">{{chat.time}}</p>
+                    </div>
+                    <div class="chat" *ngIf="messages.length > 0">
+                      <div class="chat-body p-0 m-0">
+                        <div class="chat-content m-0 mb-1" *ngFor="let message of messages">
+                          <p>{{ message }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-app-form bg-white bg-lighten-5" style="height: auto">
+                <form class="row d-flex">
+                  <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 pr-0 pl-0 mb-1">
+                    <input type="text" class="form-control" placeholder="Type your message"  (keydown.enter)="onAddMessage();$event.preventDefault()" #messageInput>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 pl-0 pr-0 d-flex">
+                    <a href="javascript:void(0)" class="btn btn-info btn-flat"><i class="icon-camera"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-info btn-flat"><i class="icon-paper-clip"></i></a>
+                    <button type="button" class="btn btn-block btn-success btn-fab pull-left" (click)="onAddMessage()">
+                      <i class="fa fa-paper-plane-o d-block d-xl-inline-block d-lg-none p-0"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="History">
+          <ng-template ngbTabContent>
+            History
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 col-12" style="height: 100%">
+    <div class="row gradient-celestial" id="video" style="height: 85%"> </div>
+    <div class="row bg-white" style="height: 15%">
+      <div class="container-fluid button-group d-flex p-4">
+        <div class="col-5">
+          <a href="javascript:void(0)" class="btn btn-lg btn-raised btn-round btn-outline-danger pull-right"><i class="ft-mic-off"></i></a>
+        </div>
+        <div class="col-2 text-center">
+          <a href="javascript:void(0)" class="btn btn-lg btn-raised btn-round btn-danger text-white shadow-z-2"><i class="icon-call-end"></i></a>
+        </div>
+        <div class="col-3">
+          <a href="javascript:void(0)" class="btn btn-lg btn-raised btn-round btn-outline-danger pull-left"><i class="ft-eye-off"></i></a>
+        </div>
+        <div class="col-2">
+          <a href="javascript:void(0)" class="btn btn-flat btn-lg mr-1 btn-primary" placement="right" ngbTooltip="Picture in picture"><i class="ft-copy"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-12 col-12" style="overflow: scroll; display: block; height: 100%">
+    <form>
+      <div class="clinical-note p-2 bg-white">
+        <p class="display-5">Case Note</p>
+        <div class="col-md-12">
+            <fieldset class="form-group">
+              <label for="subjective">Subjective</label>
+              <textarea class="form-control" id="subjective" rows="3" ></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="objective">Objective</label>
+              <textarea class="form-control" id="objective" rows="3"></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <label>Assessment</label>
+              <div>
+                <tag-input [(ngModel)]="items" (onSelect)="onSelect($event)" [modelAsStrings]="true">
+                </tag-input>
+              </div>
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="plan">Plan</label>
+              <textarea class="form-control" id="plan" rows="2"></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="action">Action</label><div>
+<!--              <ng-select [items]="cities2" bindLabel="name" bindValue="id" [multiple]="true" placeholder="Select cities" [(ngModel)]="selectedCityIds" (click)="openModal(modal1)"></ng-select>-->
+              <ng-select [items]="items2" bindLabel="name" bindValue="id" [multiple]="true" placeholder="Select cities" [(ngModel)]="selectedItemIds"></ng-select>
+            </div>
+            </fieldset>
+        </div>
+      </div>
+      <div class="p-2 bg-white">
+        <div ngbDropdown>
+          <div class="col-12 mb-2">
+            <select class="form-control" id="disposition">
+              <option disabled selected>Disposition</option>
+              <option>Follow up</option>
+              <option>Close</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <button type="submit" id="finalize" class="btn btn-block btn-raised btn-success">FINALIZE</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <ng-template #modal1 let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Modal title</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Find me here</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary btn-raised" (click)="c('Close click')">Close</button>
+    </div>
+  </ng-template>
+</div>

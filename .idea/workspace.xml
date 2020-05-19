@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97f24c54-f981-4beb-8567-4a33f27892b5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1blfF6CxRaNvJDMlekcfIcByGnX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (matngular)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (matngular-e2e)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/node_modules/protractor" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97f24c54-f981-4beb-8567-4a33f27892b5" name="Default Changelist" comment="" />
+      <created>1589211494228</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589211494228</updated>
+      <workItem from="1589211499501" duration="6040000" />
+      <workItem from="1589296969602" duration="18584000" />
+      <workItem from="1589467737185" duration="1070000" />
+      <workItem from="1589469667112" duration="2000" />
+      <workItem from="1589470171836" duration="5203000" />
+      <workItem from="1589550153962" duration="28901000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="491" y="1371" key="EditFileWatcherDialog" timestamp="1589269424984">
+      <screen x="77" y="1103" width="1680" height="978" />
+    </state>
+    <state x="491" y="1371" key="EditFileWatcherDialog/77.1103.1680.978/0.23.1920.1057@77.1103.1680.978" timestamp="1589269424984" />
+    <state width="1876" height="254" key="GridCell.Tab.0.bottom" timestamp="1589296891816">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state width="1876" height="254" key="GridCell.Tab.0.bottom/0.23.1680.1027/-1920.23.1920.1008@-1920.23.1920.1008" timestamp="1589211789691" />
+    <state width="1876" height="254" key="GridCell.Tab.0.bottom/0.23.1920.1008@0.23.1920.1008" timestamp="1589296891816" />
+    <state width="1876" height="254" key="GridCell.Tab.0.center" timestamp="1589296891816">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state width="1876" height="254" key="GridCell.Tab.0.center/0.23.1680.1027/-1920.23.1920.1008@-1920.23.1920.1008" timestamp="1589211789690" />
+    <state width="1876" height="254" key="GridCell.Tab.0.center/0.23.1920.1008@0.23.1920.1008" timestamp="1589296891816" />
+    <state width="1876" height="254" key="GridCell.Tab.0.left" timestamp="1589296891815">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state width="1876" height="254" key="GridCell.Tab.0.left/0.23.1680.1027/-1920.23.1920.1008@-1920.23.1920.1008" timestamp="1589211789689" />
+    <state width="1876" height="254" key="GridCell.Tab.0.left/0.23.1920.1008@0.23.1920.1008" timestamp="1589296891815" />
+    <state width="1876" height="254" key="GridCell.Tab.0.right" timestamp="1589296891816">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state width="1876" height="254" key="GridCell.Tab.0.right/0.23.1680.1027/-1920.23.1920.1008@-1920.23.1920.1008" timestamp="1589211789691" />
+    <state width="1876" height="254" key="GridCell.Tab.0.right/0.23.1920.1008@0.23.1920.1008" timestamp="1589296891816" />
+    <state x="498" y="269" width="659" height="508" key="find.popup" timestamp="1589856165947">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state x="498" y="269" width="659" height="508" key="find.popup/0.23.1920.1008@0.23.1920.1008" timestamp="1589856165947" />
+    <state width="600" height="440" key="javadoc.popup" timestamp="1589473792247">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state width="600" height="440" key="javadoc.popup/0.23.1920.1008@0.23.1920.1008" timestamp="1589473792247" />
+  </component>
+</project>
